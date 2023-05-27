@@ -174,7 +174,7 @@ class PhoneticTranscriber:
             p += len(rule.text)
         return result
 
-    def transcribe(self, word):
+    def transcribe(self, word, sep=None):
         # word = word.lower()
         result = self.exceptions.get(word)
         if not result:
@@ -184,14 +184,16 @@ class PhoneticTranscriber:
             tokens = self.converter.convertTokens(tokens)
         if not tokens:
             return
-        result = self.sep.join(tokens)
+        if sep is None:
+            sep = self.sep
+        result = sep.join(tokens)
         return result
 
-    def transcribePhrase(self, phrase):
+    def transcribePhrase(self, phrase, sep=None):
         if not re.match(r'^[a-zēūīāšģķļžčņ\s]*$', phrase):
             raise Exception('Unrecognized symbols in string!')
         words = re.sub(r'\s+', ' ', phrase).strip().split(' ')
-        transcribed = [self.transcribe(word) for word in words]
+        transcribed = [self.transcribe(word, sep) for word in words]
         return ' . '.join(transcribed)
 
 

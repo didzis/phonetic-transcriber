@@ -94,7 +94,7 @@ def run_server(address, transcriber, debug=False):
                             write_response(writer, addr, '400 Bad Request')
                             return
 
-                        qs = parse_qs(path.split('?', 1)[1])
+                        qs = parse_qs(path.split('?', 1)[1], True)
 
                         if not qs.get('text') and not qs.get('phrase'):
                             write_response(writer, addr, '400 Bad Request')
@@ -105,22 +105,17 @@ def run_server(address, transcriber, debug=False):
                         if body > 0:
                             await reader.read(body)
 
-                        text = qs.get('text')
-                        phrase = qs.get('phrase')
-                        if text:
-                            text = clean_text(text[0])
-                        elif phrase:
-                            phrase = clean_text(phrase[0])
-
-                        # text = clean_text(qs['text'][0])
+                        sep = qs.get('sep', [' '])[0]
+                        text = clean_text(qs.get('text', [''])[0])
+                        phrase = clean_text(qs.get('phrase', [''])[0])
 
                         try:
                             if text:
                                 print(f'Transcribing: {text}')
-                                result = transcriber.transcribe(text)
+                                result = transcriber.transcribe(text, sep)
                             elif phrase:
                                 print(f'Transcribing phrase: {phrase}')
-                                result = transcriber.transcribePhrase(phrase)
+                                result = transcriber.transcribePhrase(phrase, sep)
                         except Exception as e:
                             print(traceback.format_exc())
                             print(f'Got exception: {e}')
