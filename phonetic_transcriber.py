@@ -158,7 +158,7 @@ class PhoneticTranscriber:
         while p < len(text):
             rules = self.rules[text[p]]
             if not rules:
-                return
+                raise Exception(f'No rules for char \'{text[p]}\' at position {p}')
             rule = None
             for r in rules:
                 if self.test_rule(r, text, p):
