@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, json, re
+import os, json, re, sys, traceback
 from collections import defaultdict
 
 from phonetic_converter import PhoneticConverter, AlphabeticCharacterConverter
@@ -239,11 +239,13 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--rules', '-r', help='input rules.json')
-    parser.add_argument('--exceptdb', '-e', help='input exceptions.json')
+    parser.add_argument('--rules', '-r', metavar='FILE', type=str, help='input rules.json')
+    parser.add_argument('--exceptdb', '-e', metavar='FILE', type=str, help='input exceptions.json')
     parser.add_argument('--test', '-t', action='store_true', help='run test')
     parser.add_argument('--phrase', '-p', action='append', help='input phrase to transcribe')
-    parser.add_argument('word', nargs='*', help='input word to transcribe')
+    parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
+    parser.add_argument('--tsv', metavar='FILE', type=str, help='output to Tab Separated Value file, - to stdout')
+    parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
     args = parser.parse_args()
 
@@ -257,11 +259,48 @@ if __name__ == '__main__':
 
     transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data)
 
-    if args.phrase:
-        for phrase in args.phrase:
-            print(f'transcribing phrase: {phrase}')
-            print(f'             result:', transcriber.transcribePhrase(clean_text(phrase)))
+    if args.phrase or args.word:
+        if args.json or args.tsv:
+            result = []
+            if args.phrase:
+                for phrase in args.phrase:
+                    r = jsdict(phrase=phrase)
+                    try:
+                        r.result = transcriber.transcribePhrase(clean_text(phrase))
+                    except Exception as e:
+                        print(traceback.format_exc(), file=sys.stderr)
+                        r.error = str(e)
+                    result.append(r)
+            for word in args.word:
+                r = jsdict(word=word)
+                try:
+                    r.result = transcriber.transcribe(clean_text(word))
+                except Exception as e:
+                    print(traceback.format_exc(), file=sys.stderr)
+                    r.error = True
+                result.append(r)
 
-    for word in args.word:
-        print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
-        print('result:', transcriber.transcribe(clean_text(word)))
+            if args.json:
+                if args.json != '-':
+                    print(f'writing to {args.json}', file=sys.stderr)
+                with (sys.stdout if args.json == '-' else open(args.json, 'w')) as  f:
+                    json.dump(result, f, indent=2, ensure_ascii=False)
+                    print(file=f)
+
+            if args.tsv:
+                if args.tsv != '-':
+                    print(f'writing to {args.tsv}', file=sys.stderr)
+                with (sys.stdout if args.tsv == '-' else open(args.tsv, 'w')) as  f:
+                    for r in result:
+                        print(f'{r.word or r.phrase}\t{r.result or ""}\t{r.error or ""}', file=f)
+
+        else:
+
+            if args.phrase:
+                for phrase in args.phrase:
+                    print(f'transcribing phrase: {phrase}')
+                    print(f'             result:', transcriber.transcribePhrase(clean_text(phrase)))
+
+            for word in args.word:
+                print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
+                print('result:', transcriber.transcribe(clean_text(word)))
