@@ -245,6 +245,7 @@ if __name__ == '__main__':
     parser.add_argument('--phrase', '-p', action='append', help='input phrase to transcribe')
     parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
     parser.add_argument('--tsv', metavar='FILE', type=str, help='output to Tab Separated Value file, - to stdout')
+    parser.add_argument('--server', '-s', metavar='HOST:PORT', default='localhost:8080', help='run server listening on [HOST]:PORT')
     parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
     args = parser.parse_args()
@@ -304,3 +305,7 @@ if __name__ == '__main__':
             for word in args.word:
                 print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
                 print('result:', transcriber.transcribe(clean_text(word)))
+
+    if args.server:
+        from server import run_server
+        run_server(args.server, transcriber, debug=False)
