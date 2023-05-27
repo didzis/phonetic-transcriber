@@ -1,0 +1,4746 @@
+{
+  "metarules": {
+    "a": [
+      "a",
+      "ā",
+      "i",
+      "ī",
+      "u",
+      "ū",
+      "e",
+      "ē",
+      "ie",
+      "ai",
+      "ei",
+      "au",
+      "ou",
+      "oi",
+      "ui",
+      "o",
+      "eu",
+      "iu"
+    ],
+    "b": [
+      "g",
+      "ģ",
+      "d",
+      "dz",
+      "dž",
+      "b",
+      "z",
+      "ž"
+    ],
+    "c": [
+      "k",
+      "ķ",
+      "t",
+      "c",
+      "č",
+      "p",
+      "s",
+      "š"
+    ],
+    "d": [
+      "b",
+      "c",
+      "č",
+      "d",
+      "dz",
+      "dž",
+      "f",
+      "g",
+      "ģ",
+      "h",
+      "j",
+      "k",
+      "ķ",
+      "l",
+      "ļ",
+      "m",
+      "n",
+      "ņ",
+      "p",
+      "r",
+      "s",
+      "š",
+      "t",
+      "v",
+      "z",
+      "ž"
+    ],
+    "e": [
+      "ie",
+      "ei",
+      "e",
+      "ē",
+      "i",
+      "ī",
+      "č",
+      "dž",
+      "f",
+      "ģ",
+      "h",
+      "j",
+      "ķ",
+      "ļ",
+      "ņ",
+      "š",
+      "ž"
+    ],
+    "f": [
+      "dž",
+      "ij",
+      "ģēt",
+      "ģētik",
+      "ģētisk",
+      "h",
+      "hij",
+      "īd",
+      "īn",
+      "j",
+      "kcij",
+      "kij",
+      "ks",
+      "ld",
+      "nc",
+      "nd",
+      "nis",
+      "nīt",
+      "ntisk",
+      "nt",
+      "pej",
+      "pejisk",
+      "ps",
+      "psij",
+      "rd",
+      "rdz",
+      "rej",
+      "rf",
+      "rg",
+      "rk",
+      "rnij",
+      "rs",
+      "rt",
+      "rtij",
+      "sk",
+      "stik",
+      "stisk",
+      "tist",
+      "tl",
+      "v",
+      "vij",
+      "vism",
+      "vistisk",
+      "vist",
+      "zerist",
+      "zer"
+    ],
+    "g": [
+      "bij",
+      "bik",
+      "bisk",
+      "bism",
+      "cij",
+      "dej",
+      "dij",
+      "dik",
+      "diķ",
+      "disk",
+      "f",
+      "felisk",
+      "fij",
+      "fik",
+      "fisk",
+      "fism",
+      "fistisk",
+      "gien",
+      "gist",
+      "ģik",
+      "ģij",
+      "ģisk",
+      "gism",
+      "liķ",
+      "mik",
+      "mist",
+      "mistik",
+      "mistisk",
+      "nij",
+      "nik",
+      "niķ",
+      "nisk",
+      "nist",
+      "nistik",
+      "nistisk",
+      "peisk",
+      "piet",
+      "pij",
+      "rik",
+      "risk",
+      "rism",
+      "ristisk",
+      "tiķ"
+    ],
+    "h": [
+      "iem",
+      "am",
+      "us",
+      "os",
+      "s",
+      "a",
+      "u",
+      "ā",
+      "i"
+    ],
+    "i": [
+      "skr",
+      "skl",
+      "skv",
+      "spl",
+      "spļ",
+      "spr",
+      "str",
+      "štr",
+      "spr",
+      "bj",
+      "bl",
+      "bļ",
+      "br",
+      "dņ",
+      "dr",
+      "dv",
+      "dz",
+      "dž",
+      "gl",
+      "gļ",
+      "gn",
+      "gr",
+      "gv",
+      "kl",
+      "kļ",
+      "kn",
+      "kņ",
+      "kr",
+      "kv",
+      "pl",
+      "pļ",
+      "pn",
+      "pr",
+      "tr",
+      "tv",
+      "sl",
+      "sm",
+      "sn",
+      "sv",
+      "šļ",
+      "šm",
+      "šn",
+      "šņ",
+      "šv",
+      "zl",
+      "zn",
+      "zv",
+      "žļ",
+      "žm",
+      "žņ",
+      "žv",
+      "sk",
+      "sc",
+      "sp",
+      "st",
+      "šķ",
+      "šp",
+      "št",
+      "b",
+      "c",
+      "č",
+      "d",
+      "f",
+      "g",
+      "ģ",
+      "h",
+      "j",
+      "k",
+      "ķ",
+      "l",
+      "ļ",
+      "m",
+      "n",
+      "ņ",
+      "p",
+      "r",
+      "s",
+      "š",
+      "t",
+      "v",
+      "z",
+      "ž"
+    ],
+    "j": [
+      "a",
+      "ā",
+      "au",
+      "ai",
+      "u",
+      "ū",
+      "o"
+    ],
+    "k": [
+      "b",
+      "c",
+      "d",
+      "g",
+      "k",
+      "l",
+      "m",
+      "n",
+      "p",
+      "r",
+      "s",
+      "t",
+      "v",
+      "z"
+    ],
+    "l": [
+      "e",
+      "a",
+      "i",
+      "u"
+    ],
+    "m": [
+      "jama",
+      "jamu",
+      "jamai",
+      "jamo",
+      "jamā",
+      "jams",
+      "jamam",
+      "jamajam",
+      "jums",
+      "juma",
+      "jumi",
+      "jumos",
+      "jumiem"
+    ],
+    "n": [
+      "pa",
+      "par",
+      "pār",
+      "at",
+      "ap",
+      "sa",
+      "ne",
+      "no",
+      "iz",
+      "uz",
+      "aiz"
+    ],
+    "o": [
+      "ām",
+      "ās",
+      "as",
+      "ai",
+      "a",
+      "u",
+      "ā"
+    ],
+    "p": [
+      "ēm",
+      "ēs",
+      "es",
+      "ei",
+      "e",
+      "i",
+      "ē",
+      "u"
+    ],
+    "r": [
+      "iem",
+      "im",
+      "us",
+      "is",
+      "os",
+      "i",
+      "ī",
+      "a",
+      "u"
+    ],
+    "s": [
+      "ie",
+      "ī",
+      "ē",
+      "ū",
+      "ā"
+    ],
+    "v": [
+      "au",
+      "ai",
+      "ā",
+      "ē",
+      "ī",
+      "ie",
+      "ei"
+    ]
+  },
+  "rules": [
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "oo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ō"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "-",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "-"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "'",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "'"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_i_m_t_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "110"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "10"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "v_ie_n_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "11"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d_iu_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "12"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "t_r_ii_s_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "13"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tS_e_t_r_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "14"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "p_ie_ts_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "15"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_e_S_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "16"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_e_p_t_i_J_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "17"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "a_s_t_uo_J_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "18"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d_e_v_i_J_p_a_ts_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "19"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d_iu_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "20"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "t_r_ii_s_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "30"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tS_e_t_r_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "40"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "p_ie_ts_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "50"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_e_S_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "60"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_e_p_t_i_J_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "70"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "a_s_t_uo_J_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "80"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d_e_v_i_J_d_e_s_m_i_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "90"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_i_m_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "100"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "t_uu_k_s_t_uo_S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "1000"
+    },
+    {
+      "left": [],
+      "repl": "n_u_ll_ex",
+      "right": [],
+      "text": "0"
+    },
+    {
+      "left": [],
+      "repl": "v_ie_n_s",
+      "right": [],
+      "text": "1"
+    },
+    {
+      "left": [],
+      "repl": "d_i_v_ix",
+      "right": [],
+      "text": "2"
+    },
+    {
+      "left": [],
+      "repl": "t_r_ii_s",
+      "right": [],
+      "text": "3"
+    },
+    {
+      "left": [],
+      "repl": "tS_e_t_r_ix",
+      "right": [],
+      "text": "4"
+    },
+    {
+      "left": [],
+      "repl": "p_ie_ts_ix",
+      "right": [],
+      "text": "5"
+    },
+    {
+      "left": [],
+      "repl": "s_e_SS_ix",
+      "right": [],
+      "text": "6"
+    },
+    {
+      "left": [],
+      "repl": "s_e_p_t_i_J_ix",
+      "right": [],
+      "text": "7"
+    },
+    {
+      "left": [],
+      "repl": "a_s_t_uo_J_ix",
+      "right": [],
+      "text": "8"
+    },
+    {
+      "left": [],
+      "repl": "d_e_v_i_J_ix",
+      "right": [],
+      "text": "9"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "a_G_e_n_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "aģent"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ts_E_r",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "cer"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "E_s_uo_t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "esot"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "f_o_t_oo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "foto"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "f_o_t_oo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "foto"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "j_a",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ja"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "k_a",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ka"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "k_a_s",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "kas"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "m_aa_k_uo_J_ix",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "mākoņi"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "n_uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "no"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "n_uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "no"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "p_a",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "pa"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "S_i_s",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "šis"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "S_uo_g_a_d",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "šogad"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "t_a_s",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "tas"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "a_s_t_uo_J",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "astoņ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "t_uo_m_EE_r",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "tomēr"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "v_EE_l_aa_k",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "vēlāk"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_v_ee_d_ie_n",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "svētdien"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "s_e_z_d_ie_n",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "sestdien"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "p_ie_g_d_ie_n",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "piektdien"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ts_E_t\\_u_r_d_ie_n",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ceturtdien"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "uo_t_r",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "otr"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "d_uo_m",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dom"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "d_uo_m",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dom"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "n"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "dz_e_j_uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dzejo"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "dz_e_j_uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dzejo"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "m"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "ae"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "aj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "ai"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ai"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "aj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ai",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ai"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "au",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "av"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "au",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "av"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "au",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "au"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "aa_j",
+      "right": [
+        {
+          "tag": "m",
+          "text": "a"
+        }
+      ],
+      "text": "āj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "aa",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ā"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ax",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "a"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ax",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "a"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "a",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "a"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "p",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "b"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "b",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "b"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "dz",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "c"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "d"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        }
+      ],
+      "text": "c"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "c"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "dZ",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "č"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "tS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "č"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "dz"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "dz",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dz"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "tS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "džs"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "tS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "dž"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "dZ",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "dž"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "u",
+          "text": "m"
+        },
+        {
+          "tag": "u",
+          "text": "i"
+        },
+        {
+          "tag": "u",
+          "text": "t"
+        }
+      ],
+      "text": "ds"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ds"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "d"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "d",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "d"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ex",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ex",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ee",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ei",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "ej"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "e_i",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "ei"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ei",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ej"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ei",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ei"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "eu",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "ev"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "eu",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ev"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "e",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "č"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "e",
+      "right": [
+        {
+          "tag": "u",
+          "text": "t"
+        },
+        {
+          "tag": "u",
+          "text": "r"
+        },
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "E",
+      "right": [
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "j"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "E",
+      "right": [
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "j"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "e",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "e",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "E",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "m",
+          "text": "h"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "h"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "o"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "j"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "k"
+        },
+        {
+          "tag": "m",
+          "text": "j"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "e",
+      "right": [
+        {
+          "tag": "m",
+          "text": "e"
+        }
+      ],
+      "text": "e"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "u",
+          "text": "ts"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ee",
+      "right": [
+        {
+          "tag": "m",
+          "text": "e"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ee",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ee",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "EE",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ē"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "f",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "f"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "k",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "g"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "g",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "g"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "K",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "ģ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "G",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ģ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "x",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "h"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ie",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ie"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ix",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "i"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ix",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "i"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "iu",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "iv"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "iu",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "iv"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "i",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "i"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ii",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ī"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "v"
+        }
+      ],
+      "repl": "i^",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "j"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "v"
+        }
+      ],
+      "repl": "i^",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "j"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "i"
+        }
+      ],
+      "repl": "i^",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "j"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "j",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "j"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "g",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "kk",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "kk",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "kk",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "kk",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "k",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "k"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "G",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "KK",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "KK",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "KK",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "KK",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "K",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ķ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ll",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ll"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "l",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "l"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "L",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ļ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "mm",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "mm"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "m",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "m"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "nn",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "nn"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        }
+      ],
+      "repl": "N",
+      "right": [
+        {
+          "tag": "u",
+          "text": "g"
+        }
+      ],
+      "text": "n"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        }
+      ],
+      "repl": "N",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        }
+      ],
+      "text": "n"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "n",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "n"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "JJ",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ņņ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "J",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ņ"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "N",
+      "right": [
+        {
+          "tag": "u",
+          "text": "g"
+        }
+      ],
+      "text": "n"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "N",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        }
+      ],
+      "text": "n"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "oi",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "oj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "oi",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "oi"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ou",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "ov"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ou",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ov"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "oo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "oo"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "t"
+        },
+        {
+          "tag": "u",
+          "text": "ā"
+        },
+        {
+          "tag": "u",
+          "text": "j"
+        },
+        {
+          "tag": "m",
+          "text": "o"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "š"
+        },
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "m",
+          "text": "o"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "š"
+        },
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "u",
+          "text": "ā"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "š"
+        },
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "u",
+          "text": "n"
+        },
+        {
+          "tag": "u",
+          "text": "o"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "ņ"
+        },
+        {
+          "tag": "m",
+          "text": "h"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "t"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "t"
+        },
+        {
+          "tag": "u",
+          "text": "ie"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "t"
+        },
+        {
+          "tag": "u",
+          "text": "ā"
+        },
+        {
+          "tag": "u",
+          "text": "j"
+        },
+        {
+          "tag": "m",
+          "text": "h"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        },
+        {
+          "tag": "u",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "r"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "k"
+        },
+        {
+          "tag": "u",
+          "text": "ļ"
+        },
+        {
+          "tag": "m",
+          "text": "r"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "k"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "u",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "o",
+      "right": [
+        {
+          "tag": "m",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "o",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        },
+        {
+          "tag": "u",
+          "text": "f"
+        },
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "o",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "o",
+      "right": [
+        {
+          "tag": "u",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "o"
+        },
+        {
+          "tag": "m",
+          "text": "g"
+        },
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "oo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "g"
+        },
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "uo",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "o"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "b",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "pb"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "b",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "pp",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "pp"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "pp",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "pp",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "pp",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "pp",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "p",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "p"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "r",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "r"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "z",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ss"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "s",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "s"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "šs"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "Z",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "SS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "SS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "SS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "SS",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "š"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "d",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "td"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ts",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "ts"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "d",
+      "right": [
+        {
+          "tag": "m",
+          "text": "b"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "a"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tt",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "tt"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tt",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tt",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tt",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "tt",
+      "right": [
+        {
+          "tag": "m",
+          "text": "l"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "t",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "t"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ux",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "u"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ux",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "u"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ui",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "ui"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "repl": "ui",
+      "right": [
+        {
+          "tag": "m",
+          "text": "d"
+        }
+      ],
+      "text": "uj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "ui",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "uj"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "u",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "u"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "uu",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ū"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "v"
+        }
+      ],
+      "repl": "u^",
+      "right": [
+        {
+          "tag": "u",
+          "text": "s"
+        }
+      ],
+      "text": "v"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "v",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "v"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "ai"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "zs"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "i"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "zs"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "u"
+        },
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "zs"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "zš"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "Z",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "zž"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "s",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "z"
+    },
+    {
+      "left": [
+        {
+          "tag": "u",
+          "text": "u"
+        }
+      ],
+      "repl": "zz",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "zz"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "ss",
+      "right": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "text": "zs"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "z",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "z"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "#"
+        }
+      ],
+      "text": "žs"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "^"
+        }
+      ],
+      "repl": "S",
+      "right": [
+        {
+          "tag": "m",
+          "text": "c"
+        }
+      ],
+      "text": "ž"
+    },
+    {
+      "left": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "repl": "Z",
+      "right": [
+        {
+          "tag": "m",
+          "text": "*"
+        }
+      ],
+      "text": "ž"
+    }
+  ]
+}
