@@ -245,6 +245,7 @@ if __name__ == '__main__':
     parser.add_argument('--phrase', '-p', action='append', help='input phrase to transcribe')
     parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
     parser.add_argument('--tsv', metavar='FILE', type=str, help='output to Tab Separated Value file, - to stdout')
+    parser.add_argument('--tsv-head', action='store_true', help='output TSV header')
     parser.add_argument('--server', '-s', metavar='HOST:PORT', help='run server listening on [HOST]:PORT')
     parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
@@ -292,6 +293,8 @@ if __name__ == '__main__':
                 if args.tsv != '-':
                     print(f'writing to {args.tsv}', file=sys.stderr)
                 with (sys.stdout if args.tsv == '-' else open(args.tsv, 'w')) as  f:
+                    if args.tsv_head:
+                        print(f'WORD|PHRASE\tRESULT\tERROR', file=f)
                     for r in result:
                         print(f'{r.word or r.phrase}\t{r.result or ""}\t{r.error or ""}', file=f)
 
