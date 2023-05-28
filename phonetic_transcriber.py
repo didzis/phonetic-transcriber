@@ -203,9 +203,13 @@ class PhoneticTranscriber:
                 if not preserve_unknown:
                     # in this mode we discard unknown char tokens
                     tokens += [self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk) if not t.unknown]
+                elif sep is True:
+                    tokens += [t.text if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)]
                 else:
                     tokens.append(unknown_sep.join(t.text if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)))
-            paragraphs.append(' '.join(tokens))
+            paragraphs.append(tokens if sep is True else ' '.join(tokens))
+        if sep is True:
+            return paragraphs
         return '\n'.join(paragraphs)
 
     def transcribe(self, word, sep=None):
@@ -220,6 +224,8 @@ class PhoneticTranscriber:
             return
         if sep is None:
             sep = self.sep
+        if sep is True:
+            return tokens
         result = sep.join(tokens)
         return result
 
@@ -279,8 +285,8 @@ if __name__ == '__main__':
     parser.add_argument('--exceptdb', '-e', metavar='FILE', type=str, help='input exceptions.json')
     parser.add_argument('--test', '-t', action='store_true', help='run test')
     parser.add_argument('--phrase', '-p', action='append', help='input phrase to transcribe')
-    parser.add_argument('--phoneme-sep', '--psep', metavar='SEP', type=str, default='', help='separate phonemes')
-    parser.add_argument('--unknown-sep', '--usep', metavar='SEP', type=str, default='', help='separate unknown chars')
+    parser.add_argument('--phoneme-sep', '--psep', metavar='SEP', type=str, default='', help='phoneme separator, use \'array\' for preserving array in json output')
+    parser.add_argument('--unknown-sep', '--usep', metavar='SEP', type=str, default='', help='unknown symbols separator')
     parser.add_argument('--sep', '-S', metavar='SEP', type=str, default=None, help='sets both phoneme separator and unknown char separator')
     parser.add_argument('--skip-unknown', '-U', action='store_true', help='filter out unknown chars; renders unknown separator redundant')
     parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
@@ -305,7 +311,7 @@ if __name__ == '__main__':
 
     transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data)
 
-    sep = args.phoneme_sep
+    sep = True if args.phoneme_sep == 'array' else args.phoneme_sep
     unknown_sep = args.unknown_sep
     preserve_unknown = not args.skip_unknown
 
@@ -314,7 +320,7 @@ if __name__ == '__main__':
             result = []
             if args.phrase:
                 for phrase in args.phrase:
-                    r = jsdict(phrase=phrase)
+                    r = jsdict(text=phrase)
                     try:
                         r.result = transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=sep, unknown_sep=unknown_sep)
                     except Exception as e:
@@ -324,7 +330,7 @@ if __name__ == '__main__':
             for word in args.word:
                 r = jsdict(word=word)
                 try:
-                    r.result = transcriber.transcribe(clean_text(word))
+                    r.result = transcriber.transcribe(clean_text(word), sep=sep)
                 except Exception as e:
                     print(traceback.format_exc(), file=sys.stderr)
                     r.error = True
@@ -337,7 +343,10 @@ if __name__ == '__main__':
                     json.dump(result, f, indent=2, ensure_ascii=False)
                     print(file=f)
 
-            if args.tsv:
+            elif sep is True:
+                print(f'error: separator \'array\' is supported only for json output format', file=sys.stderr)
+
+            elif args.tsv:
                 if args.tsv != '-':
                     print(f'writing to {args.tsv}', file=sys.stderr)
                 with (sys.stdout if args.tsv == '-' else open(args.tsv, 'w')) as  f:
@@ -348,6 +357,9 @@ if __name__ == '__main__':
 
         else:
 
+            if sep is True:
+                print(f'warning: separator \'array\' is only for json output', file=sys.stderr)
+
             if args.phrase:
                 for phrase in args.phrase:
                     print(f'transcribing phrase: {phrase}')
@@ -355,7 +367,7 @@ if __name__ == '__main__':
 
             for word in args.word:
                 print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
-                print('result:', transcriber.transcribe(clean_text(word)))
+                print('result:', transcriber.transcribe(clean_text(word), sep=sep))
 
     if args.server:
         from server import run_server
