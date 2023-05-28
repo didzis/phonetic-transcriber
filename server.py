@@ -127,27 +127,32 @@ def run_server(address, transcriber, debug=False):
 
                         qs = parse_qs(path.split('?', 1)[1], True)
 
-                        if not qs.get('text') and not qs.get('phrase'):
+                        if not qs.get('text') and not text and not qs.get('word'):
                             write_response(writer, addr, '400 Bad Request')
                             return
 
-                        body = int(headers.get('content-length', 0))
-
-                        if body > 0:
-                            await reader.read(body)
-
                         sep = qs.get('sep', [' '])[0]
-                        phrase = clean_text(qs.get('phrase', [''])[0])
+                        unknown_sep = qs.get('unknown_sep', qs.get('usep', [sep]))[0]
+                        phoneme_sep = qs.get('phoneme_sep', qs.get('psep', [sep]))[0]
+
+                        preserve_unknown = True
+                        unknown_str = qs.get('unknown', qs.get('u', ['true']))[0]
+                        if unknown_str in '1tTyY' or unknown_str.lower() in ('true', 'yes'):
+                            preserve_unknown = True
+                        elif unknown_str in '0fFnN' or unknown_str.lower() in ('false', 'no'):
+                            preserve_unknown = False
+
+                        word = clean_text(qs.get('word', [''])[0])
                         if text is None:
                             text = clean_text(qs.get('text', [''])[0])
 
                         try:
-                            if text:
-                                print(f'Transcribing: {text}')
-                                result = transcriber.transcribe(text, sep)
-                            elif phrase:
-                                print(f'Transcribing phrase: {phrase}')
-                                result = transcriber.transcribePhrase(phrase, sep)
+                            if word:
+                                print(f'Transcribing: {word}')
+                                result = transcriber.transcribe(word, sep)
+                            elif text:
+                                print(f'Transcribing phrase: {text}')
+                                result = transcriber.transcribeText(text, preserve_unknown=preserve_unknown, sep=phoneme_sep, unknown_sep=unknown_sep)
                         except Exception as e:
                             print(traceback.format_exc())
                             print(f'Got exception: {e}')
