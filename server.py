@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import re, asyncio, traceback
+import re, asyncio, traceback, json
 from asyncio.streams import StreamReader, StreamWriter
 from contextlib import closing
 from urllib.parse import parse_qs
@@ -86,13 +86,44 @@ def run_server(address, transcriber, debug=False):
                                 key, value = m.groups()
                                 headers[key.lower()] = value    # we do not process recurring headers
 
-                        if method != 'GET' or not path.startswith('/transcribe'):
+                        if not (path.startswith('/transcribe?') or path == '/transcribe'):
                             write_response(writer, addr, '404 Not Found')
                             return
 
-                        if not path.startswith('/transcribe?'):
+                        if not (method in ('GET', 'POST') and path.startswith('/transcribe?')) and not (method == 'POST' and path == '/transcribe'):
                             write_response(writer, addr, '400 Bad Request')
                             return
+
+                        body = int(headers.get('content-length', 0))
+
+                        if body > 0:
+                            body = await reader.read(body)
+
+                        if method == 'POST':
+                            content_type = headers.get('content-type', 'text/html')
+                            mime_type, *content_type_params = content_type.split(';')
+                            try:
+                                content_type_params = {key:value for key, value in (kv.split('=') for kv in content_type_params)}
+                            except:
+                                write_response(writer, addr, '400 Bad Request')
+                                return
+                            content_charset = content_type_params.get('charset', 'utf-8')
+                            if content_charset != 'utf-8':
+                                print(f'charset {charset} is not  supported')
+                                write_response(writer, addr, '400 Bad Request')
+                                return
+                            if mime_type in ('text', 'text/html'):
+                                text = body.decode('utf8')
+                            elif mime_type == 'application/json':
+                                body = body.decode('utf8')
+                                body = json.loads(body)
+                                text = body.get('text')
+                            else:
+                                print(f'MIME type {mime_type} is not  supported')
+                                write_response(writer, addr, '400 Bad Request')
+                                return
+                        else:
+                            text = None
 
                         qs = parse_qs(path.split('?', 1)[1], True)
 
@@ -106,8 +137,9 @@ def run_server(address, transcriber, debug=False):
                             await reader.read(body)
 
                         sep = qs.get('sep', [' '])[0]
-                        text = clean_text(qs.get('text', [''])[0])
                         phrase = clean_text(qs.get('phrase', [''])[0])
+                        if text is None:
+                            text = clean_text(qs.get('text', [''])[0])
 
                         try:
                             if text:
