@@ -100,7 +100,7 @@ def run_server(address, transcriber, debug=False):
                             write_response(writer, addr, '400 Bad Request')
                             return
 
-                        body = headers.get('content-length', 0)
+                        body = int(headers.get('content-length', 0))
 
                         if body > 0:
                             await reader.read(body)
