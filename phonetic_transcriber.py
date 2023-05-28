@@ -63,6 +63,22 @@ class PhoneticTranscriber:
         self.rules = defaultdict(list)
         for rule in data.rules:
             self.rules[rule.text[0]].append(rule)    # rules by first char
+        self.rule_control_chars = '?#^*'    # special symbols used
+        rule_charset = set()
+        for rule in data.rules:
+            rule_charset |= set(rule.text)
+            for r in rule.left:
+                rule_charset |= set(r.text)
+            for r in rule.right:
+                rule_charset |= set(r.text)
+        for _,ts in data.metarules.items():
+            for t in ts:
+                rule_charset |= set(t)
+        self.rule_charset = ''.join(sorted(rule_charset - set(self.rule_control_chars)))
+        charset = self.rule_charset.replace('-', '\\-').replace('^', '\\^').replace('[', '\\[').replace(']', '\\]')
+        self.not_charset_re = re.compile('([^%s]+)' % charset)
+        self.charset_re = re.compile('([%s]+)' % charset)
+
 
     def test_rule(self, rule, text, p):
         if p >= len(text) or p < 0:
@@ -174,6 +190,24 @@ class PhoneticTranscriber:
             p += len(rule.text)
         return result
 
+    def split_unknown(self, text):
+        return [jsdict(text=part, unknown=self.charset_re.match(part) is None) for part in self.not_charset_re.split(text) if part]
+
+    def transcribeText(self, text, preserve_unknown=True, sep='', unknown_sep=''):
+        ws_re = re.compile(r'\s+')
+        paragraphs = []
+        for paragraph in re.split(r'\s*\n\s*', text):
+            tokens = []
+            # collapse whitespaces and split into chunks by whitespace
+            for chunk in ws_re.sub(' ', paragraph).split(' '):
+                if not preserve_unknown:
+                    # in this mode we discard unknown char tokens
+                    tokens += [self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk) if not t.unknown]
+                else:
+                    tokens.append(unknown_sep.join(t.text if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)))
+            paragraphs.append(' '.join(tokens))
+        return '\n'.join(paragraphs)
+
     def transcribe(self, word, sep=None):
         # word = word.lower()
         result = self.exceptions.get(word)
@@ -245,6 +279,10 @@ if __name__ == '__main__':
     parser.add_argument('--exceptdb', '-e', metavar='FILE', type=str, help='input exceptions.json')
     parser.add_argument('--test', '-t', action='store_true', help='run test')
     parser.add_argument('--phrase', '-p', action='append', help='input phrase to transcribe')
+    parser.add_argument('--phoneme-sep', '--psep', metavar='SEP', type=str, default='', help='separate phonemes')
+    parser.add_argument('--unknown-sep', '--usep', metavar='SEP', type=str, default='', help='separate unknown chars')
+    parser.add_argument('--sep', '-S', metavar='SEP', type=str, default=None, help='sets both phoneme separator and unknown char separator')
+    parser.add_argument('--skip-unknown', '-U', action='store_true', help='filter out unknown chars; renders unknown separator redundant')
     parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
     parser.add_argument('--tsv', metavar='FILE', type=str, help='output to Tab Separated Value file, - to stdout')
     parser.add_argument('--tsv-head', action='store_true', help='output TSV header')
@@ -252,6 +290,10 @@ if __name__ == '__main__':
     parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
     args = parser.parse_args()
+
+    if args.sep:
+        args.phoneme_sep = args.sep
+        args.unknown_sep = args.sep
 
     data = PhoneticTranscriberData(rules_filepath=args.rules or default_rules_path, exceptions_filepath=args.exceptdb or default_exceptions_path)
 
@@ -263,6 +305,10 @@ if __name__ == '__main__':
 
     transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data)
 
+    sep = args.phoneme_sep
+    unknown_sep = args.unknown_sep
+    preserve_unknown = not args.skip_unknown
+
     if args.phrase or args.word:
         if args.json or args.tsv:
             result = []
@@ -270,7 +316,7 @@ if __name__ == '__main__':
                 for phrase in args.phrase:
                     r = jsdict(phrase=phrase)
                     try:
-                        r.result = transcriber.transcribePhrase(clean_text(phrase))
+                        r.result = transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=sep, unknown_sep=unknown_sep)
                     except Exception as e:
                         print(traceback.format_exc(), file=sys.stderr)
                         r.error = str(e)
@@ -305,7 +351,7 @@ if __name__ == '__main__':
             if args.phrase:
                 for phrase in args.phrase:
                     print(f'transcribing phrase: {phrase}')
-                    print(f'             result:', transcriber.transcribePhrase(clean_text(phrase)))
+                    print(f'             result:', transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=sep, unknown_sep=unknown_sep))
 
             for word in args.word:
                 print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
