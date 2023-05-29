@@ -19,6 +19,12 @@ class jsdict(dict):
         except KeyError:
             pass
 
+
+class mapdict(dict):
+    def __missing__(self, key):
+        return key
+
+
 basedir = os.path.dirname(__file__)
 
 
@@ -52,12 +58,21 @@ class PhoneticTranscriberData:
 
 class PhoneticTranscriber:
 
-    def __init__(self, sep=' ', encoder=None, data=PhoneticTranscriberData()):
+    def __init__(self, sep=' ', encoder=None, data=PhoneticTranscriberData(), phoneme_map=None, unknown_map=None):
         self.sep = sep
         if encoder:
             self.converter = PhoneticConverter(AlphabeticCharacterConverter(), encoder)
         else:
             self.converter = None
+        if phoneme_map:
+            self.phoneme_map = phoneme_map
+        else:
+            self.phoneme_map = lambda x: x
+        if unknown_map:
+            # self.unknown_map = lambda unknown_str: ''.join(map(unknown_map, unknown_str))
+            self.unknown_map = unknown_map
+        else:
+            self.unknown_map = lambda x: x
         self.exceptions = data.exceptions
         self.metarules = data.metarules
         self.rules = defaultdict(list)
@@ -204,9 +219,9 @@ class PhoneticTranscriber:
                     # in this mode we discard unknown char tokens
                     tokens += [self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk) if not t.unknown]
                 elif sep is True:
-                    tokens += [t.text if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)]
+                    tokens += [self.unknown_map(t.text) if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)]
                 else:
-                    tokens.append(unknown_sep.join(t.text if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)))
+                    tokens.append(unknown_sep.join(self.unknown_map(t.text) if t.unknown else self.transcribe(t.text, sep=sep) for t in self.split_unknown(chunk)))
             paragraphs.append(tokens if sep is True else ' '.join(tokens))
         if sep is True:
             return paragraphs
@@ -222,6 +237,7 @@ class PhoneticTranscriber:
             tokens = self.converter.convertTokens(tokens)
         if not tokens:
             return
+        tokens = [self.phoneme_map(token) for token in tokens]
         if sep is None:
             sep = self.sep
         if sep is True:
@@ -244,6 +260,29 @@ def clean_text(text):
     text = text.replace("x", "ks");
     text = text.replace("y", "j");
     return text
+
+
+def load_map_file(filename, fmt='auto'):
+    m = mapdict()
+    if filename:
+        if fmt == 'auto':
+            _, ext = os.path.splitext(filename)
+            if ext == '.json':
+                fmt = 'json'
+            elif ext == '.tsv':
+                fmt = 'tsv'
+            else:
+                raise Exception('{filename} not loaded, unable to detect format')
+        with open(filename, 'r') as f:
+            if fmt == 'json':
+                m = json.load(f, filename, object_hook=mapdict)
+            elif fmt == 'tsv':
+                for line in f:
+                    key, value, *rest = line.strip().split('\t')
+                    m[key] = value
+            else:
+                raise Exception('{filename} not loaded, unable to detect format')
+    return m
 
 
 def test_eq(expected, check):
@@ -292,6 +331,10 @@ if __name__ == '__main__':
     parser.add_argument('--json', '-j', metavar='FILE', type=str, help='output to json file, - to stdout')
     parser.add_argument('--tsv', metavar='FILE', type=str, help='output to Tab Separated Value file, - to stdout')
     parser.add_argument('--tsv-head', action='store_true', help='output TSV header')
+    parser.add_argument('--phoneme-map', metavar='FILE', type=str, help='load phoneme map from file (autodetect json or tsv by extension or specify --phoneme-map-fmt)')
+    parser.add_argument('--phoneme-map-fmt', metavar='FMT', type=str, default='auto', help='phoneme map file format')
+    parser.add_argument('--unknown-map', metavar='FILE', type=str, help='load unknown map from file (autodetect json or tsv by extension or specify --unknown-map-fmt)')
+    parser.add_argument('--unknown-map-fmt', metavar='FMT', type=str, default='auto', help='unknown map file format')
     parser.add_argument('--server', '-s', metavar='HOST:PORT', help='run server listening on [HOST]:PORT')
     parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
@@ -309,7 +352,19 @@ if __name__ == '__main__':
 
     from phonetic_converter import IPACharacterConverter
 
-    transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data)
+    try:
+        phoneme_map = None
+        unknown_map = None
+        if args.phoneme_map:
+            phoneme_map = load_map_file(args.phoneme_map, args.phoneme_map_fmt).__getitem__
+        if args.unknown_map:
+            unknown_symbol_map = load_map_file(args.unknown_map, args.unknown_map_fmt)
+            unknown_map = lambda s: ''.join(map(unknown_symbol_map.__getitem__, s))
+    except Exception as e:
+        # print(traceback.format_exc(), file=sys.stderr)
+        print(f'warning: {e}', file=sys.stderr)
+
+    transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data, phoneme_map=phoneme_map, unknown_map=unknown_map)
 
     sep = True if args.phoneme_sep == 'array' else args.phoneme_sep
     unknown_sep = args.unknown_sep
