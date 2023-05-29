@@ -339,7 +339,7 @@ if __name__ == '__main__':
             if args.json:
                 if args.json != '-':
                     print(f'writing to {args.json}', file=sys.stderr)
-                with (sys.stdout if args.json == '-' else open(args.json, 'w')) as  f:
+                with (open(sys.stdout.fileno(), 'w', closefd=False) if args.json == '-' else open(args.json, 'w')) as  f:
                     json.dump(result, f, indent=2, ensure_ascii=False)
                     print(file=f)
 
@@ -349,7 +349,7 @@ if __name__ == '__main__':
             elif args.tsv:
                 if args.tsv != '-':
                     print(f'writing to {args.tsv}', file=sys.stderr)
-                with (sys.stdout if args.tsv == '-' else open(args.tsv, 'w')) as  f:
+                with (open(sys.stdout.fileno(), 'w', closefd=False) if args.tsv == '-' else open(args.tsv, 'w')) as  f:
                     if args.tsv_head:
                         print(f'WORD|PHRASE\tRESULT\tERROR', file=f)
                     for r in result:
