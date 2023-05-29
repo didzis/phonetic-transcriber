@@ -30,7 +30,7 @@ class async_timeout:
 # based on: https://gist.github.com/2minchul/609255051b7ffcde023be93572b25101
 
 
-def run_server(address, transcriber, debug=False):
+def run_server(address, transcriber, cors=True, debug=False):
 
     from phonetic_transcriber import clean_text
 
@@ -54,6 +54,9 @@ def run_server(address, transcriber, debug=False):
 
     def write_response(writer, addr, status='200 OK', headers={}, body=None):
         print(f'{addr} {status}')
+        if cors:
+            headers['Access-Control-Allow-Origin'] = '*'
+            headers['Access-Control-Allow-Headers'] = '*'
         writer.write(prep_response(status, headers, body))
 
     async def main_handler(reader: StreamReader, writer: StreamWriter, timeout=30):
@@ -91,8 +94,12 @@ def run_server(address, transcriber, debug=False):
                                 write_response(writer, addr, '404 Not Found')
                                 return
 
-                            if not (method in ('GET', 'POST') and path.startswith('/transcribe?')) and not (method == 'POST' and path == '/transcribe'):
+                            if not (method in ('GET', 'POST', 'OPTIONS') and path.startswith('/transcribe?')) and not (method == 'POST' and path == '/transcribe'):
                                 write_response(writer, addr, '400 Bad Request')
+                                return
+
+                            if method == 'OPTIONS':
+                                write_response(writer, addr, '200 OK')
                                 return
 
                             body = int(headers.get('content-length', 0))
