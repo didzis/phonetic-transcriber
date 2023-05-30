@@ -366,7 +366,7 @@ if __name__ == '__main__':
 
     transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data, phoneme_map=phoneme_map, unknown_map=unknown_map)
 
-    sep = True if args.phoneme_sep == 'array' else args.phoneme_sep
+    phoneme_sep = True if args.phoneme_sep == 'array' else args.phoneme_sep
     unknown_sep = args.unknown_sep
     preserve_unknown = not args.skip_unknown
 
@@ -377,7 +377,7 @@ if __name__ == '__main__':
                 for phrase in args.phrase:
                     r = jsdict(text=phrase)
                     try:
-                        r.result = transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=sep, unknown_sep=unknown_sep)
+                        r.result = transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=phoneme_sep, unknown_sep=unknown_sep)
                     except Exception as e:
                         print(traceback.format_exc(), file=sys.stderr)
                         r.error = str(e)
@@ -385,7 +385,7 @@ if __name__ == '__main__':
             for word in args.word:
                 r = jsdict(word=word)
                 try:
-                    r.result = transcriber.transcribe(clean_text(word), sep=sep)
+                    r.result = transcriber.transcribe(clean_text(word), sep=phoneme_sep)
                 except Exception as e:
                     print(traceback.format_exc(), file=sys.stderr)
                     r.error = True
@@ -398,7 +398,7 @@ if __name__ == '__main__':
                     json.dump(result, f, indent=2, ensure_ascii=False)
                     print(file=f)
 
-            elif sep is True:
+            elif phoneme_sep is True:
                 print(f'error: separator \'array\' is supported only for json output format', file=sys.stderr)
 
             elif args.tsv:
@@ -412,17 +412,17 @@ if __name__ == '__main__':
 
         else:
 
-            if sep is True:
+            if phoneme_sep is True:
                 print(f'warning: separator \'array\' is only for json output', file=sys.stderr)
 
             if args.phrase:
                 for phrase in args.phrase:
                     print(f'transcribing phrase: {phrase}')
-                    print(f'             result:', transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=sep, unknown_sep=unknown_sep))
+                    print(f'             result:', transcriber.transcribeText(clean_text(phrase), preserve_unknown=preserve_unknown, sep=phoneme_sep, unknown_sep=unknown_sep))
 
             for word in args.word:
                 print(f'transcribing input: {word}', end=' ' * max(1, 20 - len(word)), flush=True)
-                print('result:', transcriber.transcribe(clean_text(word), sep=sep))
+                print('result:', transcriber.transcribe(clean_text(word), sep=phoneme_sep))
 
     if args.server:
         from server import run_server
