@@ -57,7 +57,10 @@ def run_server(address, transcriber, cors=True, debug=False):
         if cors:
             headers['Access-Control-Allow-Origin'] = '*'
             headers['Access-Control-Allow-Headers'] = '*'
-        writer.write(prep_response(status, headers, body))
+        data = prep_response(status, headers, body)
+        writer.write(data)
+        if debug:
+            print(f'Sent to {addr} data: {data}')
 
     async def main_handler(reader: StreamReader, writer: StreamWriter, timeout=30):
         async def session():
@@ -232,7 +235,7 @@ if __name__ == '__main__':
     parser.add_argument('--rules', '-r', metavar='FILE', type=str, help='input rules.json')
     parser.add_argument('--exceptdb', '-e', metavar='FILE', type=str, help='input exceptions.json')
     parser.add_argument('--server', '-s', metavar='HOST:PORT', default='localhost:8080', help='run server listening on [HOST]:PORT')
-    parser.add_argument('--debug', '-d', help='debug mode')
+    parser.add_argument('--debug', '-d', action='store_true', help='debug mode')
 
     args = parser.parse_args()
 
