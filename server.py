@@ -110,6 +110,30 @@ def run_server(address, transcriber, cors=True, debug=False):
                             if body > 0:
                                 body = await reader.read(body)
 
+                            accepted_fmts = set()
+
+                            # accepts = []
+                            for accept in headers.get('accept', '*/*').split(','):
+                                mime_type, *q = accept.strip().split(';')
+                                if len(q) and q[0].startswith('q='):
+                                    q = float(q[0].split('=')[1])
+                                else:
+                                    q = 1.0
+                                # accepts.append(dict(mime_type=mime_type, q=q))
+                                if mime_type == '*/*':
+                                    accepted_fmts = set(['text', 'json'])
+                                elif mime_type == 'application/json':
+                                    accepted_fmts |= set(['json'])
+                                elif mime_type == 'text/plain':
+                                    accepted_fmts |= set(['text'])
+
+                            accepted_fmts = set(['text', 'json'])
+
+                            if 'text' in accepted_fmts:
+                                response_fmt = 'text'
+                            else:
+                                response_fmt = list(accepted_fmts)[0]
+
                             if method == 'POST':
                                 content_type = headers.get('content-type', 'text/plain')
                                 mime_type, *content_type_params = content_type.split(';')
@@ -142,9 +166,13 @@ def run_server(address, transcriber, cors=True, debug=False):
                                 write_response(writer, addr, '400 Bad Request')
                                 return
 
+                            response_fmt = qs.get('fmt', [response_fmt])[0]
                             sep = qs.get('sep', [' '])[0]
                             unknown_sep = qs.get('unknown_sep', qs.get('usep', [sep]))[0]
                             phoneme_sep = qs.get('phoneme_sep', qs.get('psep', [sep]))[0]
+
+                            if phoneme_sep == 'json' and 'json' in accepted_fmts:
+                                phoneme_sep = True
 
                             preserve_unknown = True
                             unknown_str = qs.get('unknown', qs.get('u', ['true']))[0]
@@ -153,6 +181,12 @@ def run_server(address, transcriber, cors=True, debug=False):
                             elif unknown_str in '0fFnN' or unknown_str.lower() in ('false', 'no'):
                                 preserve_unknown = False
 
+                            if response_fmt != 'json' and phoneme_sep is True:
+                                print(f'error: array response type (sep = True) is only supported with json result format', file=sys.stderr)
+                                write_response(writer, addr, '400 Bad Request')
+                                return
+
+
                             word = clean_text(qs.get('word', [''])[0])
                             if text is None:
                                 text = clean_text(qs.get('text', [''])[0])
@@ -160,7 +194,7 @@ def run_server(address, transcriber, cors=True, debug=False):
                             try:
                                 if word:
                                     print(f'Transcribing: {word}')
-                                    result = transcriber.transcribe(word, sep)
+                                    result = transcriber.transcribe(word, phoneme_sep)
                                 elif text:
                                     print(f'Transcribing phrase: {text}')
                                     result = transcriber.transcribeText(text, preserve_unknown=preserve_unknown, sep=phoneme_sep, unknown_sep=unknown_sep)
@@ -171,10 +205,17 @@ def run_server(address, transcriber, cors=True, debug=False):
                                 write_response(writer, addr, '500 Internal Server Error')
                                 return
 
+                            if response_fmt == 'json':
+                                result = json.dumps(result, indent=2, ensure_ascii=False)
+                                content_type = 'application/json; charset=utf-8'
+                            elif response_fmt == 'text':
+                                content_type = 'text/plain; charset=utf-8'
+
+
                             print(f'Got result: {result}')
                             # print(result.encode('utf8'))
 
-                            write_response(writer, addr, '200 OK', {'Content-Type': 'text/html; charset=utf-8'}, body=result)
+                            write_response(writer, addr, '200 OK', {'Content-Type': content_type}, body=result)
 
                             # writer.write(b'HTTP/1.1 200 OK\r\n')
                             # writer.write(b'Host: localhost\r\n')
