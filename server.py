@@ -32,7 +32,10 @@ class async_timeout:
 
 def run_server(address, transcriber, cors=True, debug=False):
 
-    from phonetic_transcriber import clean_text
+    try:
+        from .phonetic_transcriber import clean_text
+    except ImportError:
+        from phonetic_transcriber import clean_text
 
     def prep_response(status, headers={}, body=None):
         nonlocal hostname
@@ -280,8 +283,12 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    from phonetic_transcriber import PhoneticTranscriberData, default_rules_path, default_exceptions_path, PhoneticTranscriber
-    from phonetic_converter import IPACharacterConverter
+    try:
+        from .phonetic_transcriber import PhoneticTranscriberData, default_rules_path, default_exceptions_path, PhoneticTranscriber
+        from .phonetic_converter import IPACharacterConverter
+    except ImportError:
+        from phonetic_transcriber import PhoneticTranscriberData, default_rules_path, default_exceptions_path, PhoneticTranscriber
+        from phonetic_converter import IPACharacterConverter
 
     data = PhoneticTranscriberData(rules_filepath=args.rules or default_rules_path, exceptions_filepath=args.exceptdb or default_exceptions_path)
 

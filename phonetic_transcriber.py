@@ -3,7 +3,10 @@
 import os, json, re, sys, traceback
 from collections import defaultdict
 
-from phonetic_converter import PhoneticConverter, AlphabeticCharacterConverter
+try:
+    from .phonetic_converter import PhoneticConverter, AlphabeticCharacterConverter
+except ImportError:
+    from phonetic_converter import PhoneticConverter, AlphabeticCharacterConverter
 
 
 class jsdict(dict):
@@ -350,7 +353,10 @@ if __name__ == '__main__':
         print('testing')
         test(data)
 
-    from phonetic_converter import IPACharacterConverter
+    try:
+        from .phonetic_converter import IPACharacterConverter
+    except ImportError:
+        from phonetic_converter import IPACharacterConverter
 
     try:
         phoneme_map = None
@@ -425,5 +431,8 @@ if __name__ == '__main__':
                 print('result:', transcriber.transcribe(clean_text(word), sep=phoneme_sep))
 
     if args.server:
-        from server import run_server
+        try:
+            from .server import run_server
+        except ImportError:
+            from server import run_server
         run_server(args.server, transcriber, debug=False)
