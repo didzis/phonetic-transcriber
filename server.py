@@ -108,7 +108,7 @@ def run_server(address, transcriber, cors=True, debug=False):
                                 body = await reader.read(body)
 
                             if method == 'POST':
-                                content_type = headers.get('content-type', 'text/html')
+                                content_type = headers.get('content-type', 'text/plain')
                                 mime_type, *content_type_params = content_type.split(';')
                                 try:
                                     content_type_params = {key:value for key, value in (kv.split('=') for kv in content_type_params)}
@@ -116,11 +116,11 @@ def run_server(address, transcriber, cors=True, debug=False):
                                     write_response(writer, addr, '400 Bad Request')
                                     return
                                 content_charset = content_type_params.get('charset', 'utf-8')
-                                if content_charset != 'utf-8':
-                                    print(f'charset {charset} is not  supported')
+                                if content_charset.lower() != 'utf-8':
+                                    print(f'charset {content_charset} is not  supported')
                                     write_response(writer, addr, '400 Bad Request')
                                     return
-                                if mime_type in ('text', 'text/html'):
+                                if mime_type in ('text', 'text/plain'):
                                     text = body.decode('utf8')
                                 elif mime_type == 'application/json':
                                     body = body.decode('utf8')
