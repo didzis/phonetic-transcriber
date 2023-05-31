@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import re, asyncio, traceback, json
+import re, asyncio, traceback, json, sys
 from asyncio.streams import StreamReader, StreamWriter
 from contextlib import closing
 from urllib.parse import parse_qs
