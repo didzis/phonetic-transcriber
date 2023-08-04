@@ -338,6 +338,7 @@ if __name__ == '__main__':
     parser.add_argument('--phoneme-map-fmt', metavar='FMT', type=str, default='auto', help='phoneme map file format')
     parser.add_argument('--unknown-map', metavar='FILE', type=str, help='load unknown map from file (autodetect json or tsv by extension or specify --unknown-map-fmt)')
     parser.add_argument('--unknown-map-fmt', metavar='FMT', type=str, default='auto', help='unknown map file format')
+    parser.add_argument('--no-encoder', '-E', action='store_true', help='disable IPA character encoder')
     parser.add_argument('--server', '-s', metavar='HOST:PORT', help='run server listening on [HOST]:PORT')
     parser.add_argument('word', nargs='*', type=str, help='input word to transcribe')
 
@@ -370,7 +371,8 @@ if __name__ == '__main__':
         # print(traceback.format_exc(), file=sys.stderr)
         print(f'warning: {e}', file=sys.stderr)
 
-    transcriber = PhoneticTranscriber(sep=' ', encoder=IPACharacterConverter(), data=data, phoneme_map=phoneme_map, unknown_map=unknown_map)
+    transcriber = PhoneticTranscriber(sep=' ', encoder=None if args.no_encoder else IPACharacterConverter(), data=data,
+                                      phoneme_map=phoneme_map, unknown_map=unknown_map)
 
     phoneme_sep = True if args.phoneme_sep == 'array' else args.phoneme_sep
     unknown_sep = args.unknown_sep
