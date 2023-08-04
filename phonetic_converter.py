@@ -215,13 +215,13 @@ class IPASimplifiedCharacterConverter:
         for i, c in enumerate(word):
             if state == 0:
                 if (c in self.charsets[0] or c in self.charsets[1]) and i > 0:
-                    tokens.append(token);
-                    token = "";
+                    tokens.append(token)
+                    token = ""
                 if c in self.charsets[0] or c == self.charsets[2]:
-                    state=1;
-                token += c;
+                    state = 1
+                token += c
             elif state == 1:
-                token += c;
+                token += c
                 state = 0
         return tokens
 
@@ -246,13 +246,13 @@ class IPACharacterConverter:
         for i, c in enumerate(word):
             if state == 0:
                 if (c in self.charsets[0] or c in self.charsets[1]) and i > 0:
-                    tokens.append(token);
-                    token = "";
+                    tokens.append(token)
+                    token = ""
                 if c in self.charsets[0] or c == self.charsets[2]:
-                    state=1;
-                token += c;
+                    state = 1
+                token += c
             elif state == 1:
-                token += c;
+                token += c
                 state = 0
         return tokens
 
@@ -272,7 +272,7 @@ class PhoneticConverter:
         return [self.encoder.fromIPAchar(self.decoder.toIPAchar(token)) for token in tokens]
 
     def convert(self, word, separator = ''):
-        tokens = self.decoder.tokenize(word);
+        tokens = self.decoder.tokenize(word)
         if not tokens:
             return
         tokens = self.convertTokens(tokens)
