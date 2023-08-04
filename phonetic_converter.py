@@ -132,7 +132,7 @@ class AlphabeticCharacterConverter:
     def toIPAchar(self, char):
         after = None
         before = None
-        if len(char) >= 1:
+        if len(char) > 1:
             after = self.toIPAafter.get(char[len(char)-1])
             before = self.toIPAbefore.get(char[0])
             if after:
